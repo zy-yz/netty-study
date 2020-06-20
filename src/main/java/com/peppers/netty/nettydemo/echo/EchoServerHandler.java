@@ -14,6 +14,10 @@ import java.util.concurrent.TimeUnit;
  **/
 public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 
+    // 1.
+    // EchoServerHandler继承了ChannelInboundHandlerAdapter，并覆盖了channelRead方法，
+    // 当接受到客户端发送了请求之后，channelRead方法会被回调。
+    // 参数ChannelHandlerContext包含了"当前发送请求的客户端"的一些上下文信息，msg表示客户端发送的请求信息。
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg){
         System.out.println("客户端["+ctx.channel().remoteAddress()+"]->服务器端"+msg.toString());

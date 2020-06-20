@@ -20,12 +20,14 @@ public class EchoClientHandler extends ChannelInboundHandlerAdapter {
         System.out.println("通道注册成功...");
     }
 
+    //   当客户端与服务端连接建立成功后，channelActive方法会被回调，
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
         ctx.writeAndFlush(firstMessage);
         System.out.println("通道被激活...");
     }
 
+    // 当接受到服务端响应后，channelRead方法会被会回调
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         System.out.println("收到服务器端消息： " + msg);
