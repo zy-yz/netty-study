@@ -1,10 +1,13 @@
 package com.peppers.netty.netty_redis.utils;
 
 /**
- * @ClassName EncodeUtils
- * @Author peppers
- * @Date 2020/6/29
- * @Description
- **/
+ * @author peppers
+ */
 public class EncodeUtils {
+    public static byte[] getBytes(Object object){
+        if(object == null){
+            return null;
+        }
+        return String.valueOf(object).getBytes();
+    }
 }
