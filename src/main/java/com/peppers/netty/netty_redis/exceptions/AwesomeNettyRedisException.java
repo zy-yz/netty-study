@@ -6,5 +6,8 @@ package com.peppers.netty.netty_redis.exceptions;
  * @Date 2020/6/29
  * @Description
  **/
-public class AwesomeNettyRedisException {
+public class AwesomeNettyRedisException extends Exception {
+    public AwesomeNettyRedisException(String message) {
+        super(message);
+    }
 }

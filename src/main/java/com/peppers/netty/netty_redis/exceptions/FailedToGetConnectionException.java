@@ -6,5 +6,8 @@ package com.peppers.netty.netty_redis.exceptions;
  * @Date 2020/6/29
  * @Description
  **/
-public class FailedToGetConnectionException {
+public class FailedToGetConnectionException extends AwesomeNettyRedisException {
+    public FailedToGetConnectionException(String message) {
+        super(message);
+    }
 }
